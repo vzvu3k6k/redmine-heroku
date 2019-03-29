@@ -1,1 +1,5 @@
 ruby File.read('.ruby-version').chomp
+
+# Override default dependency
+dependencies.reject! { |d| d.name == 'puma' }
+gem 'puma'
