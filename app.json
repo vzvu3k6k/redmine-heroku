@@ -8,7 +8,14 @@
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
+    },
+    "ADMIN_PASSWORD": {
+      "description": "An initial password for admin.",
+      "generator": "secret"
     }
+  },
+  "scripts": {
+    "postdeploy": "bin/rails runner scripts/set_admin_password.rb"
   },
   "addons": [
     "heroku-postgresql"
