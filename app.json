@@ -1,0 +1,21 @@
+{
+  "name": "Redmine",
+  "description": "An unofficial Heroku app of Redmine",
+  "website": "https://github.com/vzvu3k6k/redmine",
+  "repository": "https://github.com/vzvu3k6k/redmine",
+  "success_url": "/",
+  "env": {
+    "SECRET_TOKEN": {
+      "description": "A secret key for verifying the integrity of signed cookies.",
+      "generator": "secret"
+    }
+  },
+  "addons": [
+    "heroku-postgresql"
+  ],
+  "buildpacks": [
+    {
+      "url": "heroku/ruby"
+    }
+  ]
+}
