@@ -12,10 +12,14 @@
     "ADMIN_PASSWORD": {
       "description": "An initial password for admin.",
       "generator": "secret"
+    },
+    "REDMINE_LANG": {
+      "description": "A locale for default data.",
+      "value": "en"
     }
   },
   "scripts": {
-    "postdeploy": "bin/rails runner scripts/set_admin_password.rb"
+    "postdeploy": "bin/rails runner scripts/set_admin_password.rb && bin/rake redmine:load_default_data"
   },
   "addons": [
     "heroku-postgresql"
