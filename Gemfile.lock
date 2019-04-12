@@ -1,2 +1,7 @@
+GEM
+  remote: https://rubygems.org/
+  specs:
+    activerecord (5.2.3)
+
 PLATFORMS
   x86-mswin32
