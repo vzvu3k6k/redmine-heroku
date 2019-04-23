@@ -9,6 +9,10 @@
       "description": "Redmine version",
       "value": "4.0.3"
     },
+    "REDMINE_LANG": {
+      "description": "A locale for default data.",
+      "value": "en"
+    },
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
@@ -16,10 +20,6 @@
     "ADMIN_PASSWORD": {
       "description": "An initial password for admin.",
       "generator": "secret"
-    },
-    "REDMINE_LANG": {
-      "description": "A locale for default data.",
-      "value": "en"
     }
   },
   "scripts": {
