@@ -13,6 +13,11 @@
       "description": "A locale for default data.",
       "value": "en"
     },
+    "OVERLAY_URL": {
+      "description": "A custom overlay URL for `git clone`",
+      "value": "",
+      "required": false
+    },
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
