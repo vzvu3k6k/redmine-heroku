@@ -4,7 +4,7 @@ echo "admin's password: $(cat "$ENV_DIR/ADMIN_PASSWORD")"
 
 curl "https://www.redmine.org/releases/redmine-$(cat "$ENV_DIR/REDMINE_VERSION").tar.gz" | tar xz --strip 1
 
-mv overlays/config/* config
+mv overlay/config/* config
 
 OVERLAY_URL=$(cat "$ENV_DIR/OVERLAY_URL")
 if [ ! -z "$OVERLAY_URL" ]; then
