@@ -1,0 +1,11 @@
+production:
+  email_delivery:
+    delivery_method: :async_smtp
+    async_smtp_settings:
+      address: smtp.sendgrid.net
+      port: 587
+      domain: <%= ENV['APPLICATION_HOST'].presence || "ENV['HEROKU_APP_NAME'].herokuapp.com" %>
+      authentication: :plain
+      user_name: <%= ENV['SENDGRID_USERNAME'] %>
+      password: <%= ENV['SENDGRID_PASSWORD'] %>
+      enable_starttls_auto: true

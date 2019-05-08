@@ -18,6 +18,11 @@
       "value": "",
       "required": false
     },
+    "APPLICATION_HOST": {
+      "description": "A hostname of this application for mail configuration. ${HEROKU_APP_NAME}.herokuapp.com is used if missing.",
+      "value": "",
+      "required": false
+    },
     "SECRET_TOKEN": {
       "description": "A secret key for verifying the integrity of signed cookies.",
       "generator": "secret"
@@ -31,7 +36,8 @@
     "postdeploy": "bin/rails runner scripts/set_admin_password.rb && bin/rake redmine:load_default_data"
   },
   "addons": [
-    "heroku-postgresql"
+    "heroku-postgresql",
+    "sendgrid"
   ],
   "buildpacks": [
     {
